@@ -37,10 +37,11 @@ html::-webkit-scrollbar-thumb {
   z-index: 1000;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  border-bottom: 0.2rem solid #84817a;
+  justify-content: center;
+  flex-wrap: nowrap;
 }
 .header .user-icon {
+  width: 20%;
   color: #10221b;
 }
 .header .user-icon:hover {
@@ -48,23 +49,101 @@ html::-webkit-scrollbar-thumb {
   font-size: larger;
 }
 .header .navbar {
-  padding-left: 60%;
+  width: 70%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: end;
 }
 .header .navbar a {
-  padding: 0 2rem;
   color: #10221b;
+  padding: 0 2rem;
 }
 .header .navbar a:hover {
   color: #84817a;
   font-size: larger;
 }
-.header .icons a {
-  color: #10221b;
-  margin-left: 1.5rem;
+.header .icon {
+  width: 10%;
 }
-.header .icons a:hover {
+.header .icon a {
+  color: #10221b;
+  padding: 0 0.5rem;
+}
+.header .icon a:hover {
   color: #84817a;
   font-size: larger;
+}
+
+.slodan {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.slodan h1 {
+  color: #444;
+  font-family: "Satisfy", cursive;
+}
+
+.date-mood {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 10%;
+}
+.date-mood .date {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.date-mood .date label {
+  margin-right: 1rem;
+}
+.date-mood .date input {
+  width: 10rem;
+  padding: 0.5rem;
+  background: #F8EFBA;
+  border: 0.1 solid #596275;
+  border-radius: 5rem;
+}
+.date-mood .mood {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.date-mood .mood .emoji-mood {
+  width: 50%;
+  display: flex;
+  flex-wrap: nowrap;
+  background: #0c2461;
+  justify-content: space-around;
+  border-radius: 5rem;
+  margin: 0 1rem;
+}
+.date-mood .mood .emoji-mood i {
+  color: #f9ca24;
+}
+
+@media (max-width: 991px) {
+  htlm {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 768px) {
+  html {
+    font-size: 0.6rem;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 0.5rem;
+  }
+  .date-mood {
+    padding: 2rem 2%;
+  }
+  .date-mood .date input {
+    font-size: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

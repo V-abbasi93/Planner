@@ -49,11 +49,12 @@ html{
     z-index: 1000;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    border-bottom: .2rem solid #84817a;
+    justify-content:center;
+    flex-wrap: nowrap;
     
 
     .user-icon{
+        width: 20%;
         color: $black;
 
         &:hover{
@@ -62,10 +63,14 @@ html{
         }
     }
     .navbar{
-        padding-left: 60%;
+        width: 70%;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: end;
         a{
-            padding: 0 2rem;
             color: $black;
+            padding: 0 2rem;
+            
             
             &:hover{
                 color: $grey;
@@ -74,15 +79,105 @@ html{
         }
     }
 
-    .icons a{
-        color: $black;
-        margin-left: 1.5rem;
-        
-        &:hover{
-            color: $grey;
-            font-size: larger;
+    .icon {
+        width: 10%;
+        a{
+            color: $black;
+            padding: 0 .5rem;
+            
+            &:hover{
+                color: $grey;
+                font-size: larger;
+            }
+        }
+    }
+}
+.slodan{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    h1{
+        color: #444;
+        font-family: 'Satisfy', cursive;
+    }
+}
+
+.date-mood{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 10%;
+    
+    .date{
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        label{
+            margin-right: 1rem;
+        }
+        input{
+            width: 10rem;
+            padding: 0.5rem;
+            background: #F8EFBA;
+            border: 0.1 solid #596275;
+            border-radius: 5rem;
+        }
+    }
+
+
+    .mood{
+        width: 40%;
+        display: flex;
+        flex-wrap: wrap;
+
+        .emoji-mood{
+            width: 50%;
+            display: flex;
+            flex-wrap: nowrap;
+            background:#0c2461;
+            justify-content: space-around;
+            border-radius: 5rem;
+            margin: 0 1rem;
+
+            i{
+                color: #f9ca24;
+            }
+
         }
     }
 }
 
 
+
+
+
+
+
+
+
+
+@media (max-width: 991px){
+    htlm{
+        font-size: .8rem;
+    }
+    
+}
+
+@media (max-width: 768px){
+    html{
+        font-size: .6rem;
+    }
+}
+
+@media (max-width: 450px){
+    html{
+        font-size: .5rem;
+    }
+    .date-mood{
+        padding: 2rem 2%;
+    }
+    .date-mood .date input{
+        font-size: .8rem;
+    }
+}
